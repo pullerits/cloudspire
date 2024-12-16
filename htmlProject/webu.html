@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-EE">
+<head>
+    <title>Cool website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="happy.png">
+    <style>
+
+        .side-by-side-container {
+            display: flex; /* Enables Flexbox layout */
+            justify-content: space-around; /* Adds space between the divs */
+            align-items: center; /* Aligns items vertically */
+            margin: 20px; /* Adds space around the container */
+        }
+        /* Style for each child div */
+        .side-by-side-container div {
+            text-align: center; /* Centers content inside each div */
+            margin: 10px; /* Adds space around each div */
+        }
+
+        body {
+            background-color: #f0f0f0;
+        }
+            /* Links are blue, no underline */
+        a {
+            color: #3498db; /* Nice blue color */
+            text-decoration: none; /* Removes the underline */
+            font-weight: bold; /* Makes the link text bold */
+        }
+
+        /* On hover, the link changes color */
+        a:hover {
+            color: #2ecc71; /* Green color when hovered */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        /* Visited links (optional customization) */
+        a:visited {
+            color: #9b59b6; /* Purple for visited links */
+        }
+        /* Make the image look clickable */
+        #myImage {
+        cursor: pointer; /* Changes mouse icon to a hand pointer */
+        }
+    </style>
+    <script>
+        function toggleImage() {
+            // Get the image element
+            const img = document.getElementById('myImage');
+
+            const header = document.getElementById('imageHeader');
+
+            // Check the current image source and toggle it
+            if (img.src.includes('happy.png')) {
+                // If it's happy, change to sad
+                img.src = 'sad.png';
+                header.textContent = 'Here is sad image';
+            } else {
+                // If it's sad, change to happy
+                img.src = 'happy.png';
+                header.textContent = 'Here is happy image';
+            }
+        }
+
+        // Initialize the click counter
+        let clickCount = 0;
+
+        // Function to handle cookie clicks
+        function cookieClicker() {
+        // Increment the click counter
+        clickCount++;
+
+        // Update the <h2> element with the new click count
+        document.getElementById('clickCount').textContent = `${clickCount}`;
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="font-size: 60px;background-color:Tomato;border:2px solid DodgerBlue;" title="I'm a header">COOL WEBSITE!</h1>
+        <p title="I'm a paragraph"> <i>This is <mark>paragraph </mark>of text.</i></p>
+        <a href="https://study.kood.tech/dashboard" target="_blank"> Visit Kood/Johvi </a>
+        <a href="#C4">Jump to Chapter 4</a>
+
+        <!-- horizontal rule used for thematic break-->
+        <hr>
+        <!-- border container to to seperate content instead of <hr> (advanced)-->
+        <div style="border-bottom: 2px solid #ccc; margin: 20px 0;"></div>
+        <h3 class="changing-text" >Here is an EPIC Unordered list (Bullets)</h3>
+        <ul>
+            <li><ins>Item 1</ins></li>
+            <li><del>Item 2</del></li>
+            <li><sub>Item 3</sub> <sup>yes</sup></li>
+        </ul>
+
+        <h3 style="color:rebeccapurple;">Here is an Ordered list (Numbers)</h3>
+        <ol>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ol>
+        <hr style="border: 0; height: 5px; background: linear-gradient(to right, #ff0000, #0000ff);">
+        <div class="side-by-side-container">
+            <div>
+                <h3 id="imageHeader" class="highlight">Here is happy image</h3>
+                <img id="myImage" 
+                src="happy.png" 
+                alt="Toggle face" 
+                width="300" 
+                height="200" 
+                onclick="toggleImage()">
+            </div>
+            <div>
+                <h2 id="clickCount">click the cookie</h2>
+                <img id="cookiePng" 
+                src="cookie.png" 
+                alt="cookie picture" 
+                width="200" height="200"
+                onclick="cookieClicker()">
+            </div>
+        </div>
+        <p>Here is a quote from Chungus Bungus The Great</p>
+
+        <blockquote>
+            <q>Life’s like a shrinking map—keep moving, stay sharp, and adapt to whatever’s thrown your way. Build something out of nothing, take your shot, and remember: the storm always comes, but so does your chance to shine.</q>
+        </blockquote>
+        <hr>
+        <table border="10">
+            <caption>Table caption</caption>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Swag</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>25</td>
+                <td>2,1</td>
+            </tr>
+            <tr>
+                <td>Jane</td>
+                <td>30</td>
+                <td>3,7</td>
+            </tr>
+            
+        </table>
+
+        <form id="C4" action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
