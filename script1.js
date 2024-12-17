@@ -35,9 +35,10 @@ function cookieClicker() {
 
     // Change the cookie image every 10 clicks
     if (clickCount % 10 === 0) {
-        levelCount = (levelCount + 1) % cookieImages.length; // Cycle through images
-        cookie.src = cookieImages[levelCount];
-        cookieLevelElement.textContent = `Level ${levelCount + 1} cookie`;
+        levelCount++;  // Increment levelCount (do not reset it)
+        const imageIndex = (levelCount - 1) % cookieImages.length; // Cycle through images
+        cookie.src = cookieImages[imageIndex];
+        cookieLevelElement.textContent = `Level ${levelCount} cookie`; // Display current level
     }
 
     // Win condition at 100 clicks
@@ -47,4 +48,5 @@ function cookieClicker() {
         cookieLevelElement.textContent = `You reached the max level!`;
     }
 }
+
 
