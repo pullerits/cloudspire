@@ -43,51 +43,18 @@
         cursor: pointer; /* Changes mouse icon to a hand pointer */
         }
     </style>
-    <script>
-        function toggleImage() {
-            // Get the image element
-            const img = document.getElementById('myImage');
-
-            const header = document.getElementById('imageHeader');
-
-            // Check the current image source and toggle it
-            if (img.src.includes('happy.png')) {
-                // If it's happy, change to sad
-                img.src = 'sad.png';
-                header.textContent = 'Here is sad image';
-            } else {
-                // If it's sad, change to happy
-                img.src = 'happy.png';
-                header.textContent = 'Here is happy image';
-            }
-        }
-
-        // Initialize the click counter
-        let clickCount = 0;
-
-        // Function to handle cookie clicks
-        function cookieClicker() {
-        // Increment the click counter
-        clickCount++;
-
-        // Update the <h2> element with the new click count
-        document.getElementById('clickCount').textContent = `${clickCount}`;
-        }
-    </script>
-
 </head>
 
 <body>
     <div class="container">
         <h1 style="font-size: 60px;background-color:Tomato;border:2px solid DodgerBlue;" title="I'm a header">COOL WEBSITE!</h1>
-        <p title="I'm a paragraph"> <i>This is <mark>paragraph </mark>of text.</i></p>
-        <a href="https://study.kood.tech/dashboard" target="_blank"> Visit Kood/Johvi </a>
-        <a href="#C4">Jump to Chapter 4</a>
+        <p title="I'm a paragraph"> <i>This is <mark>100% </mark>true.</i></p>
+        <a href="https://study.kood.tech/dashboard" target="_blank" style="margin-right: 20px;"> Visit Kood/Johvi</a>
+        <a href="#creditCardForm">Enter credit card information</a>
 
         <!-- horizontal rule used for thematic break-->
         <hr>
-        <!-- border container to to seperate content instead of <hr> (advanced)-->
-        <div style="border-bottom: 2px solid #ccc; margin: 20px 0;"></div>
+
         <h3 class="changing-text" >Here is an EPIC Unordered list (Bullets)</h3>
         <ul>
             <li><ins>Item 1</ins></li>
@@ -115,44 +82,70 @@
             <div>
                 <h2 id="clickCount">click the cookie</h2>
                 <img id="cookiePng" 
-                src="cookie.png" 
+                src="cookie0.png" 
                 alt="cookie picture" 
                 width="200" height="200"
                 onclick="cookieClicker()">
+                <h2 id="cookieLevel"> level 1 cookie</h2>
             </div>
         </div>
-        <p>Here is a quote from Chungus Bungus The Great</p>
+        <hr style="border: 0; height: 5px; background: linear-gradient(to right, #ff0000, #0000ff);">
+
+        <table border="10">
+            <caption>Cookie highscores</caption>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Score</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>25</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Jane</td>
+                <td>30</td>
+                <td>54</td>
+            </tr>
+            
+        </table>
+
+        <hr>
+
+        <p>Here is a quote from Chungus Bungus the 13th:</p>
 
         <blockquote>
             <q>Life’s like a shrinking map—keep moving, stay sharp, and adapt to whatever’s thrown your way. Build something out of nothing, take your shot, and remember: the storm always comes, but so does your chance to shine.</q>
         </blockquote>
         <hr>
-        <table border="10">
-            <caption>Table caption</caption>
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Swag</th>
-            </tr>
-            <tr>
-                <td>John</td>
-                <td>25</td>
-                <td>2,1</td>
-            </tr>
-            <tr>
-                <td>Jane</td>
-                <td>30</td>
-                <td>3,7</td>
-            </tr>
-            
-        </table>
 
-        <form id="C4" action="/submit" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <button type="submit">Submit</button>
+        <h2>Enter to win epic price!</h2>
+
+        <form id="creditCardForm" action="/submit" method="post">
+            <!-- Cardholder Name -->
+            <label for="cardName">Cardholder Name:</label>
+            <input type="text" id="cardName" name="cardName" placeholder="John Doe" required><br><br>
+        
+            <!-- Credit Card Number -->
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required><br><br>
+        
+            <!-- Expiration Date -->
+            <label for="expiryDate">Expiration Date:</label>
+            <input type="month" id="expiryDate" name="expiryDate" required><br><br>
+        
+            <!-- CVV -->
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" required><br><br>
+        
+            <!-- Submit Button -->
+            <button type="submit">Submit Payment</button>
         </form>
+        
     </div>
+
+    <script src="script1.js"></script>
 
 </body>
 
