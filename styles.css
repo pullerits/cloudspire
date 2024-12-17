@@ -34,3 +34,11 @@
     background-color: white; /* White background for the content */
     padding: 20px; /* Adds space inside the container */
 }
+
+#cookiePng {
+    transition: transform 0.05s ease; /* Smooth shrinking effect */
+}
+
+.shrink {
+    transform: scale(0.9); /* Shrinks the image to 90% of its size */
+}
