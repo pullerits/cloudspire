@@ -4,54 +4,15 @@
     <title>Cool website</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="happy.png">
-    <style>
-
-        .side-by-side-container {
-            display: flex; /* Enables Flexbox layout */
-            justify-content: space-around; /* Adds space between the divs */
-            align-items: center; /* Aligns items vertically */
-            margin: 20px; /* Adds space around the container */
-        }
-        /* Style for each child div */
-        .side-by-side-container div {
-            text-align: center; /* Centers content inside each div */
-            margin: 10px; /* Adds space around each div */
-        }
-
-        body {
-            background-color: #f0f0f0;
-        }
-            /* Links are blue, no underline */
-        a {
-            color: #3498db; /* Nice blue color */
-            text-decoration: none; /* Removes the underline */
-            font-weight: bold; /* Makes the link text bold */
-        }
-
-        /* On hover, the link changes color */
-        a:hover {
-            color: #2ecc71; /* Green color when hovered */
-            text-decoration: underline; /* Underline on hover */
-        }
-
-        /* Visited links (optional customization) */
-        a:visited {
-            color: #9b59b6; /* Purple for visited links */
-        }
-        /* Make the image look clickable */
-        #myImage {
-        cursor: pointer; /* Changes mouse icon to a hand pointer */
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
         <h1 style="font-size: 60px;background-color:Tomato;border:2px solid DodgerBlue;" title="I'm a header">COOL WEBSITE!</h1>
-        <p title="I'm a paragraph"> <i>This is <mark>100% </mark>true.</i></p>
+        <p title="I'm a paragraph"> <i>This is <mark>100% </mark>true.  Made by a professional developer.</i></p>
         <a href="https://study.kood.tech/dashboard" target="_blank" style="margin-right: 20px;"> Visit Kood/Johvi</a>
         <a href="#creditCardForm" style="margin-right: 20px;">Enter credit card information</a>
-        <a href="subpage.html">Oiia cat</a>
+        <a href="subpage.html">OIIA cat</a>
 
 
         <!-- horizontal rule used for thematic break-->
@@ -71,14 +32,13 @@
             <li>Third item</li>
         </ol>
         <hr style="border: 0; height: 5px; background: linear-gradient(to right, #ff0000, #0000ff);">
+
         <div class="side-by-side-container">
             <div>
                 <h3 id="imageHeader" class="highlight">Here is happy image</h3>
                 <img id="myImage" 
                 src="happy.png" 
                 alt="Toggle face" 
-                width="300" 
-                height="200" 
                 onclick="toggleImage()">
             </div>
             <div>
@@ -86,11 +46,11 @@
                 <img id="cookiePng" 
                 src="cookie0.png" 
                 alt="cookie picture" 
-                width="200" height="200"
                 onclick="cookieClicker()">
                 <h2 id="cookieLevel"> level 1 cookie</h2>
             </div>
         </div>
+        
         <hr style="border: 0; height: 5px; background: linear-gradient(to right, #ff0000, #0000ff);">
 
         <table border="10">
@@ -109,6 +69,11 @@
                 <td>Jane</td>
                 <td>30</td>
                 <td>54</td>
+            </tr>
+            <tr>
+                <td>DK</td>
+                <td>23</td>
+                <td>98</td>
             </tr>
             
         </table>

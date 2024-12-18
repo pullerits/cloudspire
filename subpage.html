@@ -5,78 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OIIA Cat</title>
-    <style>
-
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            display: flex; /* Centers content in the body */
-            justify-content: center;
-            align-items:start;
-            height: 100vh; /* Makes body take up full height of the viewport */
-        }
-
-        .gif-container {
-            width: 80vw; /* The GIF will take up 50% of the viewport width */
-            max-width: 800px; /* The maximum size of the GIF */
-            min-width: 100px; /* The minimum size of the GIF */
-            aspect-ratio: 16 / 9; /* Maintain a fixed aspect ratio (widescreen format) */
-        }
-
-        .gif-container img {
-            width: 100%; /* Scale to the container's width */
-            height: 100%; /* Scale proportionally */
-            object-fit: contain; /* Prevent distortion and ensure it fits nicely */
-        }
-
-        .side-by-side-container {
-            display: flex; /* Enables Flexbox layout */
-            justify-content: space-around; /* Adds space between the divs */
-            align-items: center; /* Aligns items vertically */
-            margin: 20px; /* Adds space around the container */
-        }
-        /* Style for each child div */
-        .side-by-side-container div {
-            text-align: center; /* Centers content inside each div */
-            margin: 10px; /* Adds space around each div */
-        }
-
-            /* Links are blue, no underline */
-        a {
-            color: #3498db; /* Nice blue color */
-            text-decoration: none; /* Removes the underline */
-            font-weight: bold; /* Makes the link text bold */
-        }
-
-        /* On hover, the link changes color */
-        a:hover {
-            color: #2ecc71; /* Green color when hovered */
-            text-decoration: underline; /* Underline on hover */
-        }
-
-        /* Visited links (optional customization) */
-        a:visited {
-            color: #9b59b6; /* Purple for visited links */
-        }
-        /* Make the image look clickable */
-        #myImage {
-        cursor: pointer; /* Changes mouse icon to a hand pointer */
-        }
-    </style>
 </head>
 <body>
     <div class="container">
         <h1 style="font-size: 60px;background-color:Tomato;border:2px solid DodgerBlue;" title="I'm a header">OIIA Cat</h1>
         <a href="index.html">Go back to the main page</a>
         <hr style="border: 0; height: 5px; background: linear-gradient(to right, #ff0000, #0000ff);">
+        <div class="vid-container">
 
-        <div class="gif-container">
-            <img id="catGif" src="cat.gif" alt="Cat Animation">
-                    <!-- Start and Stop Buttons -->
+            <video id="catVideo" src="cat.mp4" preload="auto"></video>
+         
+            <!-- Start and Stop Buttons -->
             <div>
                 <button id="startBtn">Start</button>
                 <button id="stopBtn">Stop</button>
+            </div>
+            <!-- Speed Control Slider -->
+            <div>
+                <label for="speedSlider">Speed:</label>
+                <input type="range" id="speedSlider" min="0.1" max="3.0" value="1.0" step="0.1">
+                <span id="speedValue">1.0x</span>
             </div>
         </div>
     </div>

@@ -1,36 +1,34 @@
 // Get references to DOM elements
-const gif = document.getElementById("catGif");
+const video = document.getElementById("catVideo");
 const startButton = document.getElementById("startBtn");
 const stopButton = document.getElementById("stopBtn");
+const speedSlider = document.getElementById("speedSlider");
+const speedValue = document.getElementById("speedValue");
 
-// Store the GIF source and static placeholder
-const gifSrc = "cat.gif"; // Replace with your GIF path
-const staticFrame = "cat.png"; // Replace with a static frame (first frame of the GIF)
-const sound = new Audio("cat.mp3")
+// Initial setup: Pause the video at the start
+video.currentTime = 0; 
+video.pause();
 
-// Initial setup - stop the GIF (display the static frame)
-gif.src = staticFrame;
-
-// Function to play GIF once
-function startGif() {
-
-    sound.currentTime = 0;
-    sound.play();
-
-    // Replace the src with the GIF source that plays once
-    gif.src = ""; // Clear the src to reset the animation
-    setTimeout(() => {
-        gif.src = gifSrc + "?playonce"; // Append a query to ensure reload
-    }, 0);
+// Function to start the video (play once)
+function startVideo() {
+    video.currentTime = 0; // Reset to the beginning
+    video.play();          // Play the video
 }
 
-// Function to stop the GIF (show static frame)
-function stopGif() {
-    gif.src = staticFrame;
-    sound.pause();
-    sound.currentTime = 0;
+// Function to stop the video
+function stopVideo() {
+    video.pause();         // Pause the video
+    video.currentTime = 0; // Reset to the beginning
+}
+
+// Function to update playback speed
+function updateSpeed() {
+    const speed = parseFloat(speedSlider.value);
+    video.playbackRate = speed; // Adjust video speed
+    speedValue.textContent = `${speed.toFixed(1)}x`; // Update the displayed speed
 }
 
 // Event listeners
-startButton.addEventListener("click", startGif);
-stopButton.addEventListener("click", stopGif);
+startButton.addEventListener("click", startVideo);
+stopButton.addEventListener("click", stopVideo);
+speedSlider.addEventListener("input", updateSpeed);

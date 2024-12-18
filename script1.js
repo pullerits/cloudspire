@@ -15,8 +15,10 @@ function toggleImage() {
         header.textContent = 'Here is happy image';
     }
 }
+
+
 let clickCount = 0;    // Keeps track of total clicks
-let levelCount = 0;    // Keeps track of the current level
+let levelCount = 1;    // Keeps track of the current level
 const cookieImages = ['cookie0.png', 'cookie1.png', 'cookie2.png', 'cookie3.png', 'cookie4.png']; // Array of cookie images
 
 function cookieClicker() {
