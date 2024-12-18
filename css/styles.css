@@ -13,6 +13,7 @@ body {
 
 /* Container Styling */
 .container {
+    padding-top: 80px;
     width: 80%; /* Content takes 80% of the screen width */
     max-width: 800px; /* Content won't grow wider than 800px */
     margin: 0 auto; /* Centers the container horizontally */
@@ -20,16 +21,6 @@ body {
     padding: 20px; /* Adds space inside the container */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
     border-radius: 8px; /* Optional: Adds rounded corners */
-}
-
-/* Header Styling */
-h1 {
-    font-size: 60px;
-    background-color: Tomato;
-    border: 2px solid DodgerBlue;
-    padding: 10px;
-    text-align: center;
-    border-radius: 8px;
 }
 
 /* Horizontal Rule Styling */
@@ -68,7 +59,7 @@ hr {
     align-items: center;
 }
 
-/* Style for Buttons */
+/* Style for Buttons 
 button {
     padding: 10px 20px;
     margin-right: 10px;
@@ -79,6 +70,7 @@ button {
     border-radius: 4px;
     font-size: 16px;
 }
+*/
 
 button:hover {
     background-color: #1e90ff;
