@@ -7,11 +7,11 @@ function toggleImage() {
     // Check the current image source and toggle it
     if (img.src.includes('happy.png')) {
         // If it's happy, change to sad
-        img.src = 'sad.png';
+        img.src = 'assets/images/sad.png';
         header.textContent = 'Here is sad image';
     } else {
         // If it's sad, change to happy
-        img.src = 'happy.png';
+        img.src = 'assets/images/happy.png';
         header.textContent = 'Here is happy image';
     }
 }
@@ -19,7 +19,11 @@ function toggleImage() {
 
 let clickCount = 0;    // Keeps track of total clicks
 let levelCount = 1;    // Keeps track of the current level
-const cookieImages = ['cookie0.png', 'cookie1.png', 'cookie2.png', 'cookie3.png', 'cookie4.png']; // Array of cookie images
+const cookieImages = ['assets/images/cookie0.png', 
+                'assets/images/cookie1.png', 
+                'assets/images/cookie2.png', 
+                'assets/images/cookie3.png', 
+                'assets/images/cookie4.png']; // Array of cookie images
 
 function cookieClicker() {
     // Increment the click counter
@@ -45,7 +49,7 @@ function cookieClicker() {
 
     // Win condition at 100 clicks
     if (clickCount > 99) {
-        cookie.src = 'youWin.png';
+        cookie.src = 'assets/images/youWin.png';
         clickCountElement.textContent = `Congratulations!!!`;
         cookieLevelElement.textContent = `You reached the max level!`;
     }
