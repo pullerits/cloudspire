@@ -11,6 +11,7 @@ video.pause();
 
 // Function to start the video (play once)
 function startVideo() {
+    video.muted = false;        // Unmute the video on user interaction
     video.currentTime = 0; // Reset to the beginning
     video.play();          // Play the video
 }
