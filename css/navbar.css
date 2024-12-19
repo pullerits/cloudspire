@@ -1,4 +1,10 @@
-
+.navbar-brand-link {
+    /* Custom styles for the navbar brand link */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the current text color */
+    font-weight: bold; /* Example styling */
+    font-size: 1.5rem; /* Adjust font size */
+}
 
 .navbar {
     position: fixed;
@@ -85,8 +91,11 @@
 
 
 /* User account section styling */
-.navbar-user a {
+.navbar-user a {    
     color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust font size as needed */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
     text-decoration: none; /* Remove underline */
     font-size: 18px; /* Adjust font size as needed */
     transition: color 0.3s ease; /* Smooth transition for hover effect */
@@ -96,6 +105,18 @@
 .navbar-user a:hover {
     color: #f0f0f0; /* Slight color change on hover */
     text-decoration: underline; /* Underline on hover */
+}
+.navbar-about a {
+    font-weight: bold;
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust font size as needed */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar-about a:hover {
+    color: #f0f0f0;
+    text-decoration: underline;
 }
 
 /* Responsive adjustments */
@@ -111,5 +132,6 @@
     .navbar-user a {
       font-size: 16px; /* Smaller text on mobile */
     }
-  }
+
+}
   

@@ -1,31 +1,27 @@
 /* Existing styles ... */
 
-/* Body Styling */
-body {
-    background-color: #f0f0f0;
-    display: flex; /* Centers content in the body */
-    justify-content: center;
-    align-items: start;
-    height: 100vh; /* Makes body take up full height of the viewport */
-}
-
 /* Container Styling */
-.container {
-    width: 80%; /* Content takes 80% of the screen width */
-    max-width: 800px; /* Content won't grow wider than 800px */
-    margin: 60px; /* Centers the container horizontally */
-    background-color: white; /* White background for the content */
-    padding: 20px; /* Adds space inside the container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
-    border-radius: 8px; /* Optional: Adds rounded corners */
+
+
+body {
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
-/* Horizontal Rule Styling */
-hr {
-    border: 0;
-    height: 5px;
-    background: linear-gradient(to right, #ff0000, #0000ff);
-    margin: 20px 0;
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff; /* White background for each block */
+    margin-bottom: 20px; /* Add spacing between blocks */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners for aesthetics */
+    padding: 20px;
 }
 
 /* Video Container Styling */
@@ -76,26 +72,6 @@ input[type="range"] {
     margin-left: 10px;
     font-weight: bold;
     font-size: 16px;
-}
-
-/* Links Styling */
-a {
-    color: #3498db; /* Nice blue color */
-    text-decoration: none; /* Removes the underline */
-    font-weight: bold; /* Makes the link text bold */
-}
-
-.navbar-brand-link {
-    /* Custom styles for the navbar brand link */
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Use the current text color */
-    font-weight: bold; /* Example styling */
-    font-size: 1.5rem; /* Adjust font size */
-}
-
-/* Ensure general 'a' styling doesn't affect this link */
-.navbar-brand-link a {
-    all: unset; /* Resets all inherited styles */
 }
 
 .shrink {
