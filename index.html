@@ -1,110 +1,136 @@
 <!DOCTYPE html>
 <html lang="en-EE">
 <head>
-    <title>Cool Website</title>
+    <title> Website</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="icon" href="assets/images/coolLogo.png">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 
 <body>
-    <!-- Navbar -->
+
     <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-group">
-                <div class="navbar-brand">
-                    <a href="index.html" class="navbar-brand-link">COOL WEBSITE!</a>
-                </div>
-
-                <div class="navbar-products">
-                    <button class="dropdown-toggle">Products</button>
-                    <div class="dropdown-menu">
-                        <a href="oiia-cat.html">OIIA Cat</a>
-                        <a href="#creditCardForm">Win Prize</a>
-                    </div>
-                </div>
-                <div class="navbar-about">
-                    <a  href="about.html"> About</a>
-                </div>
-
+        <div class="navdiv">
+            <div class="logo"> 
+                <a href="index.html">
+                    <img src="assets/images/logotext.png" alt="CloudSpire">
+                </a> 
             </div>
-
-            <div class="navbar-user">
-                <!-- User account information or icon -->
-                <a href="#">Sign Up / Log In</a>
-            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <button>Products</button>
+                    <ul class="menu-list">
+                        <li><a href="#Product1">Product1</a></li>
+                        <li><a href="#Product2">Product2</a></li>
+                        <li><a href="#Product3">Product3</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <nav class="login">
+                    <button class="button-login">Log In</button>
+                    <button class="button-signin">Sign In</button>
+                </nav>
+            </ul>
         </div>
     </nav>
 
-    <div class="container">
-        <h1>Powered by BMM capital industries</h1>
-        <p>Leading provider of cool experiences since 1997</p>
+    <!-- MOBILE NAVBAR -->
+    <nav class="navbar-mobile">
+        <div class="hamburger-icon">
+            <!-- Placeholder hamburger icon; you can replace the text or use an <img> -->
+            <span>&#9776; <!-- This is just the ‘☰’ menu symbol --></span>
+        </div>
+        <div class="logo-mobile">
+            <a href="index.html">
+                <img src="assets/images/logotext.png" alt="CloudSpire">
+            </a>
+        </div>
+        <div class="login-mobile">
+            <button class="button-login-mobile">Log In</button>
+        </div>
+    </nav>
 
 
-    </div>
-    
-
-    <div class="container">
-
-        <h3 class="changing-text" >Reasons why this website is cool:</h3>
-        <ul>
-            <li><ins>Happy face</ins></li>
-            <li><del>Sad face</del></li>
-            <li><sub>cat</sub> <sup>oiia</sup></li>
-        </ul>
-
-        <hr>
-
-        <div class="side-by-side-container">
-            <div>
-                <h3 id="imageHeader" class="highlight">Here is happy image</h3>
-                <img id="myImage" 
-                src="assets/images/happy.png" 
-                alt="Toggle face" 
-                onclick="toggleImage()">
+    <main class="container">
+        <!-- HERO / INTRO SECTION -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Welcome to CloudSpire</h1>
+                <p>
+                    CloudSpire delivers cutting-edge cloud solutions that empower businesses 
+                    of all sizes. From seamless migrations to scalable architectures, we have 
+                    the tools you need to innovate faster and achieve sustainable growth in 
+                    today’s digital landscape.
+                </p>
+                <a href="contact.html" class="hero-cta">Get Started</a>
             </div>
-            <div>
-                <h2 id="clickCount">click the cookie</h2>
-                <img id="cookiePng" 
-                src="assets/images/cookie0.png" 
-                alt="cookie picture" 
-                onclick="cookieClicker()">
-                <h2 id="cookieLevel"> level 1 cookie</h2>
+        </section>
+
+        <!-- Feature HIGHLIGHTS -->
+        <section class="features-intro">
+            <h1>Why Choose CloudSpire?</h1>
+            <div class="container-sidebyside">
+                <div>
+                    <h2>Powerful & Scalable</h2>
+                    <p>
+                        Our platform is built on state-of-the-art infrastructure, ensuring your 
+                        applications handle increased workloads effortlessly. With elastic resources, 
+                        you only pay for what you use—ideal for both startups and large-scale 
+                        enterprises.
+                    </p>
+                </div>
+                <div>
+                    <h2>Secure & Reliable</h2>
+                    <p>
+                        At CloudSpire, we prioritize data protection with advanced security protocols 
+                        and 24/7 monitoring. Our redundancy measures help maintain near-zero downtime, 
+                        letting you focus on growing your business while we handle the heavy lifting.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADDITIONAL SECTION: Partnerships or Testimonials -->
+        <section class="testimonials">
+            <h1>Our Clients & Partners</h1>
+            <p>
+                We’re proud to collaborate with industry leaders who rely on our cloud expertise 
+                to drive innovation and growth. Our client list spans e-commerce, finance, healthcare, 
+                and more—all benefiting from our commitment to performance, security, and customer 
+                success.
+            </p>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <h2>Global Finance Corp</h2>
+                    <p>
+                        “CloudSpire’s robust architecture and expert guidance helped us move our 
+                        critical operations online. Their team was responsive, dedicated, and highly 
+                        knowledgeable—truly a one-stop shop for cloud solutions.”
+                    </p>
+                </div>
+                <div class="testimonial">
+                    <h2>HealthEdge Systems</h2>
+                    <p>
+                        “Switching to CloudSpire significantly reduced our operational costs while 
+                        improving security compliance. We can now deliver faster, safer services to 
+                        our patients, which has been a game changer.”
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER-LIKE SECTION (Fixed at Bottom) -->
+        <div class="container2">
+            <div id="box1">
+                <div>
+                    <p>© 2024 CloudSpire Technologies, All Rights Reserved</p>
+                </div>
             </div>
         </div>
-
-        <hr>
-
-        <h2>Enter to win epic price!</h2>
-
-        <form id="creditCardForm" action="/submit" method="post">
-            <!-- Cardholder Name -->
-            <label for="cardName">Cardholder Name:</label>
-            <input type="text" id="cardName" name="cardName" placeholder="John Doe" required><br><br>
-        
-            <!-- Credit Card Number -->
-            <label for="cardNumber">Card Number:</label>
-            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required><br><br>
-        
-            <!-- Expiration Date -->
-            <label for="expiryDate">Expiration Date:</label>
-            <input type="month" id="expiryDate" name="expiryDate" required><br><br>
-        
-            <!-- CVV -->
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" required><br><br>
-        
-            <!-- Submit Button -->
-            <button type="submit">Submit Payment</button>
-        </form>
-        
-    </div>
-
-    <script src="js/script1.js"></script>
-    <script src="js/navbar.js"></script>
-
+    </main>
 </body>
 
 </html>

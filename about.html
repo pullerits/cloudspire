@@ -1,91 +1,137 @@
 <!DOCTYPE html>
 <html lang="en-EE">
 <head>
-    <title>Cool Website</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="icon" href="assets/images/coolLogo.png">
     <meta charset="UTF-8">
+    <title>About - Sample Company</title>
+    <!-- If you have existing style files, link them here -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about.css">
+
+    <!-- Responsive design meta tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
-    <!-- Navbar -->
+
     <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-group">
-                <div class="navbar-brand">
-                    <a href="index.html" class="navbar-brand-link">COOL WEBSITE!</a>
-                </div>
-
-                <div class="navbar-products">
-                    <button class="dropdown-toggle">Products</button>
-                    <div class="dropdown-menu">
-                        <a href="oiia-cat.html">OIIA Cat</a>
-                        <a href="#creditCardForm">Win Prize</a>
-                    </div>
-                </div>
-                <div class="navbar-about">
-                    <a  href="about.html"> About</a>
-                </div>
-
+        <div class="navdiv">
+            <div class="logo"> 
+                <a href="index.html">
+                    <img src="assets/images/logotext.png" alt="CloudSpire">
+                </a> 
             </div>
-
-            <div class="navbar-user">
-                <!-- User account information or icon -->
-                <a href="#">Sign Up / Log In</a>
-            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <button>Products</button>
+                    <ul class="menu-list">
+                        <li><a href="#Product1">Product1</a></li>
+                        <li><a href="#Product2">Product2</a></li>
+                        <li><a href="#Product3">Product3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <nav class="login">
+                    <button class="button-login">Log In</button>
+                    <button class="button-signin">Sign In</button>
+                </nav>
+            </ul>
         </div>
     </nav>
-    
 
-    <div class="container">
+    <!-- MOBILE NAVBAR -->
+    <nav class="navbar-mobile">
+        <div class="hamburger-icon">
+            <!-- Placeholder hamburger icon; you can replace the text or use an <img> -->
+            <span>&#9776; <!-- This is just the ‘☰’ menu symbol --></span>
+        </div>
+        <div class="logo-mobile">
+            <a href="index.html">
+                <img src="assets/images/logotext.png" alt="CloudSpire">
+            </a>
+        </div>
+        <div class="login-mobile">
+            <button class="button-login-mobile">Log In</button>
+        </div>
+    </nav>
 
-        <hr>
+    <main class="container">
+        <section class="hero-section">
+            <h1>About Sample Company</h1>
+            <p>Empowering businesses through cloud technology</p>
+        </section>
 
-        <h1>Fed Cuts Key Interest Rate To Lowest In Nearly Two Years</h1>
+        <section class="our-story">
+            <h2>Our Story</h2>
+            <p>
+                Founded in 20XX, Sample Company started with a vision to bridge the gap 
+                between businesses and cutting-edge cloud technologies. Over the years, 
+                we have remained steadfast in our commitment to innovation, adaptability, 
+                and customer-centric solutions.
+            </p>
+            <p>
+                Today, our global team of experts ensures that companies of all sizes 
+                benefit from secure, reliable, and scalable cloud services. Our passion 
+                for technology drives us to continuously evolve, staying ahead of market 
+                trends and delivering unparalleled value.
+            </p>
+        </section>
 
-        <p>
-            Cras ornare lacinia lectus ut aliquam. Maecenas vehicula mi non ex mattis, sed ornare nunc cursus. Cras dolor diam, feugiat vitae enim eu, dapibus semper dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque at nibh mauris. Proin vehicula risus eu sem ornare suscipit. Sed quis cursus tortor, in laoreet ipsum. Etiam auctor vel nunc sed auctor. Nunc faucibus lacus convallis nisl sodales, sed varius urna aliquet. Nulla magna arcu, lacinia eu eros in, eleifend iaculis sapien. Phasellus sollicitudin ut ipsum eget ultrices. Pellentesque lacinia, sapien sed tempus luctus, nunc nibh rhoncus odio, tempus consectetur ipsum tellus et purus. Ut quis commodo lorem. Sed eget placerat mi, at convallis lectus. Etiam maximus enim risus, id maximus sem finibus a.
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to empower organizations by providing seamless, 
+                state-of-the-art cloud solutions. We believe in using technology to 
+                simplify processes, enhance growth, and create opportunities for businesses 
+                worldwide. 
+            </p>
+        </section>
 
-        </p>
-        
-    </div>
+        <section class="vision">
+            <h2>Our Vision</h2>
+            <p>
+                We envision a future where every business—regardless of size or location—can 
+                harness the power of modern, integrated cloud environments without the burden 
+                of complexity. By continuously innovating our products and services, we aim 
+                to become the global standard for reliable, high-performance cloud computing.
+            </p>
+        </section>
 
-    <div class="container">
+        <section class="our-team">
+            <h2>Meet the Team</h2>
+            <p>
+                Our diverse team of experts is the driving force behind our success. 
+                From dedicated developers to strategic account managers, each member 
+                brings specialized knowledge and a passion for customer satisfaction.
+            </p>
+            <!-- Optionally, you can add a grid or list of team members here. -->
+        </section>
 
-        <hr>
+        <section class="our-values">
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Innovation:</strong> We embrace change and strive to lead through continuous improvement.</li>
+                <li><strong>Integrity:</strong> We conduct business with honesty and transparency.</li>
+                <li><strong>Customer-Centric:</strong> We place our clients at the heart of every decision.</li>
+                <li><strong>Collaboration:</strong> We believe diverse minds working together yield the best results.</li>
+            </ul>
+        </section>
 
-        <h1>Trump's Tariff Talk Is Making the Fed Cautious About Cutting Interest Rates</h1>
+        <section class="contact-cta">
+            <h2>Get In Touch</h2>
+            <p>
+                Have questions, feedback, or just want to say hello? 
+                <a href="contact.html">Contact us</a> and let’s chat about how our solutions 
+                can help your business thrive.
+            </p>
+        </section>
+    </main>
 
-        <p>
-            Cras ornare lacinia lectus ut aliquam. Maecenas vehicula mi non ex mattis, sed ornare nunc cursus. Cras dolor diam, feugiat vitae enim eu, dapibus semper dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque at nibh mauris. Proin vehicula risus eu sem ornare suscipit. Sed quis cursus tortor, in laoreet ipsum. Etiam auctor vel nunc sed auctor. Nunc faucibus lacus convallis nisl sodales, sed varius urna aliquet. Nulla magna arcu, lacinia eu eros in, eleifend iaculis sapien. Phasellus sollicitudin ut ipsum eget ultrices. Pellentesque lacinia, sapien sed tempus luctus, nunc nibh rhoncus odio, tempus consectetur ipsum tellus et purus. Ut quis commodo lorem. Sed eget placerat mi, at convallis lectus. Etiam maximus enim risus, id maximus sem finibus a.
-            <br> <br>
-            Cras ornare lacinia lectus ut aliquam. Maecenas vehicula mi non ex mattis, sed ornare nunc cursus. Cras dolor diam, feugiat vitae enim eu, dapibus semper dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque at nibh mauris. Proin vehicula risus eu sem ornare suscipit. Sed quis cursus tortor, in laoreet ipsum. Etiam auctor vel nunc sed auctor.
-
-
-
-        </p>
-        
-    </div>
-
-    <div class="container">
-
-        <hr>
-
-        <h1>Here’s Why the Dow Just Had Its Worst Slump in 50 Years</h1>
-
-        <p>
-            Cras ornare lacinia lectus ut aliquam. Maecenas vehicula mi non ex mattis, sed ornare nunc cursus. Cras dolor diam, feugiat vitae enim eu, dapibus semper dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque at nibh mauris. Proin vehicula risus eu sem ornare suscipit. Sed quis cursus tortor, in laoreet ipsum. Etiam auctor vel nunc sed auctor. Nunc faucibus lacus convallis nisl sodales, sed varius urna aliquet. Nulla magna arcu, lacinia eu eros in, eleifend iaculis sapien. Phasellus sollicitudin ut ipsum eget ultrices. Pellentesque lacinia, sapien sed tempus luctus, nunc nibh rhoncus odio, tempus consectetur ipsum tellus et purus. Ut quis commodo lorem. Sed eget placerat mi, at convallis lectus. Etiam maximus enim risus, id maximus sem finibus a.
-
-
-        </p>
-        
-    </div>
-
-    <script src="js/script1.js"></script>
-    <script src="js/navbar.js"></script>
+    <!-- Optional footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Sample Company. All rights reserved.</p>
+    </footer>
 
 </body>
-
 </html>

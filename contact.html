@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-EE">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Sample Company</title>
+    <!-- If you have existing style files, link them here -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <!-- Responsive design meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"> 
+                <a href="index.html">
+                    <img src="assets/images/logotext.png" alt="CloudSpire">
+                </a> 
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <button>Products</button>
+                    <ul class="menu-list">
+                        <li><a href="#Product1">Product1</a></li>
+                        <li><a href="#Product2">Product2</a></li>
+                        <li><a href="#Product3">Product3</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <nav class="login">
+                    <button class="button-login">Log In</button>
+                    <button class="button-signin">Sign In</button>
+                </nav>
+            </ul>
+        </div>
+    </nav>
+
+
+    <main class="container">
+        <section class="contact-intro">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Fill out the form below or reach out via one of our other channels.</p>
+        </section>
+
+        <section class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <form class="contact-form" action="#" method="POST">
+                <!-- Action can be updated to your backend endpoint, e.g. /send-message -->
+                <div class="form-group">
+                    <label for="name">Your Name<span style="color: red;">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address<span style="color: red;">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter a valid email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject<span style="color: red;">*</span></label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message<span style="color: red;">*</span></label>
+                    <textarea id="message" name="message" placeholder="Type your message here..." rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </section>
+
+        <section class="contact-details">
+            <h2>Other Ways to Contact Us</h2>
+            <ul>
+                <li><strong>Address:</strong> 1234 Innovation Way, Tech City, 5678</li>
+                <li><strong>Phone:</strong> +1 (555) 123-4567</li>
+                <li><strong>Email:</strong> <a href="mailto:info@samplecompany.com">info@samplecompany.com</a></li>
+                <li><strong>Support:</strong> <a href="mailto:support@samplecompany.com">support@samplecompany.com</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Optional footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Sample Company. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

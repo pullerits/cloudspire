@@ -1,124 +1,197 @@
-/* Existing styles ... */
+* {
+    /* outline: 1px solid red; /*Applies a red outline to every element */
+    text-decoration: none;
+}
 
-/* Container Styling */
-
-
+/* Main body styling*/
 body {
-    padding-top: 70px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    margin: 0px;
+    font-family: 'Montserrat';
 }
-
 .container {
-    width: 100%;
+    max-width: 1200px; /* Set the maximum width of your content */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 15px; /* Add some padding for smaller screens */
+    background-color: white; /* Optional: Content background */
+}
+
+/* Two-column layout (desktop) */
+.container-sidebyside {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns, each taking equal space */
+    gap: 20px; /* Space between columns */
+}
+
+/* Headings and paragraphs */
+h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+p {
+    margin: 0;
+    padding: 10px;
+    line-height: 1.6;
+}
+
+/* -------------------------------------------------
+   Hero Section
+-------------------------------------------------- */
+.hero-section {
+    background: linear-gradient(135deg, #A685E2 0%, #7159B1 100%);
+    color: #fff; /* Text color against the gradient background */
+    padding: 40px 20px; /* Space around the content */
+    margin-bottom: 30px;
+    border-radius: 4px; /* Slightly rounded corners if you wish */
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0; /* Override the default heading padding */
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    padding: 0; /* Override default p padding */
+    margin-bottom: 1.5rem;
+}
+
+.hero-cta {
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.hero-cta:hover {
+    background-color: #f0f0f0;
+}
+
+/* -------------------------------------------------
+   Features / Intro
+-------------------------------------------------- */
+.features-intro h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+/* -------------------------------------------------
+   Testimonials
+-------------------------------------------------- */
+.testimonials {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.testimonials h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.testimonials p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    padding: 10px;
     max-width: 800px;
-    background-color: #ffffff; /* White background for each block */
-    margin-bottom: 20px; /* Add spacing between blocks */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 8px; /* Rounded corners for aesthetics */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Testimonial Grid */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+.testimonial {
+    background-color: #f9f9f9;
+    border-radius: 4px;
     padding: 20px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 90%;
+}
+.testimonial h2 {
+    background: none;
+    padding: 0;
+    margin: 0 0 0.5rem;
+}
+.testimonial p {
+    padding: 0;
+    margin: 0;
 }
 
-/* Video Container Styling */
-.vid-container {
-    width: 100%; /* Ensures it matches the container's width */
-    max-width: 100%; /* Prevents exceeding the container's width */
-    margin-top: 20px;
+/* -------------------------------------------------
+   Sticky Footer / Container2 
+-------------------------------------------------- */
+.container2 {
+    /* Container2 is outside normal flow; 
+       you might not need special styles here 
+       if #box1 is position: fixed */
+}
+#box1 {
+    left: 0;
+    right: 0;
+    height: 35px;
+    background: rgb(51, 34, 70);
+    position: fixed;
+    bottom: 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
-}
-
-/* Responsive Video Styling */
-.vid-container video {
-    width: 100%; /* Scale to the container's width */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Removes any unwanted spacing below the video */
-    border: 2px solid DodgerBlue; /* Optional: Adds a border to match the header */
-    border-radius: 8px; /* Optional: Adds rounded corners */
-}
-
-/* Control Buttons and Sliders */
-.vid-container div {
-    margin-top: 10px;
-    width: 100%;
-    display: flex;
     justify-content: center;
-    align-items: center;
+}
+#box1 div {
+    margin: auto;
+    font-size: 12px;
+    color: rgb(224, 224, 224);
+    width: fit-content;
 }
 
-button:hover {
-    background-color: #1e90ff;
-}
+/* -------------------------------------------------
+   Responsive / Mobile Adjustments
+-------------------------------------------------- */
+@media (max-width: 768px) {
 
-/* Style for Labels and Sliders */
-label {
-    margin-right: 10px;
-    font-weight: bold;
-    font-size: 16px;
-}
+    /* Hide desktop navbar, show mobile navbar 
+       (already defined in navbar.css) */
 
-input[type="range"] {
-    vertical-align: middle;
-    width: 200px; /* Adjust as needed */
-}
-
-#speedValue {
-    margin-left: 10px;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.shrink {
-    transform: scale(0.95); /* Shrinks the image to 90% of its size */
-}
-
-/* Container for Side-by-Side Elements */
-.side-by-side-container {
-    display: flex; /* Enables Flexbox layout */
-    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
-    justify-content: space-around; /* Distributes space evenly around items */
-    align-items: flex-start; /* Aligns items to the top */
-    margin: 20px; /* Adds space around the container */
-    gap: 20px; /* Adds consistent spacing between items */
-}
-
-/* Style for each child div inside .side-by-side-container */
-.side-by-side-container > div {
-    flex: 1 1 300px; /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 300px */
-    max-width: 45%; /* Ensures two items fit side by side with some spacing */
-    background-color: #ffffff; /* Optional: Adds a white background for contrast */
-    padding: 15px; /* Adds inner spacing */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
-    border-radius: 8px; /* Optional: Rounds the corners */
-    text-align: center; /* Centers text within each div */
-}
-
-/* Responsive Images */
-.side-by-side-container img {
-    width: 100%; /* Makes images take up the full width of their container */
-    height: auto; /* Maintains aspect ratio */
-    max-width: 100%; /* Prevents images from exceeding their container */
-    border-radius: 4px; /* Optional: Rounds image corners */
-    cursor: pointer; /* Indicates that the image is clickable */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-    .side-by-side-container > div {
-        max-width: 100%; /* Stacks the divs vertically on smaller screens */
+    /* Stack columns vertically in .container-sidebyside */
+    .container-sidebyside {
+        grid-template-columns: 1fr;
     }
-}
 
-@media (max-width: 500px) {
-    /* Optional: Adjust font sizes for better readability on very small screens */
-    .side-by-side-container h2,
-    .side-by-side-container h3 {
-        font-size: 1.2em;
+    /* Testimonial grid -> single column */
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Hero heading smaller */
+    .hero-content h1 {
+        font-size: 2rem;
     }
 }

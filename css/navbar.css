@@ -1,137 +1,190 @@
-.navbar-brand-link {
-    /* Custom styles for the navbar brand link */
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Use the current text color */
-    font-weight: bold; /* Example styling */
-    font-size: 1.5rem; /* Adjust font size */
-}
-
+/* ============================================= */
+/* DESKTOP NAVBAR STYLES (existing from snippet) */
+/* ============================================= */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: rgb(71, 89, 255);
-    display: flex;
-    align-items: center; 
-    z-index: 1000; /* Ensures navbar stays above other elements */
-
+    background: rgb(51, 34, 70);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px; /* Adds spacing to reveal the shadow */
 }
-
-.navbar-container {
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between; /* Spaces out brand and user sections */
-    align-items: center;
-    padding: 0 20px; /* Horizontal padding */
-}
-.navbar-group {
+.navdiv {
+    /* outline: solid red 1px; */
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: space-between;
+    margin: 0 auto; /* for max width to work*/
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 1190px;
+    height: 50px;
+}
+.navbar .navdiv ul {
+    padding: 0;
+    margin: 0;
 }
 
-/* Website name styling */
-.navbar-brand {
-    font-size: 24px; /* Adjust font size as needed */
-    color: white; /* Text color */
-    font-weight: bold; /* Bold text */
+.navbar .logo img {
+    max-height: 40px; /* Adjust height to fit the navbar */
+    width: auto; /* Maintain aspect ratio */
 }
+.navdiv > ul > li {
+    font-family: "Montserrat", sans-serif;
+    list-style: none;
+    display: inline-block;
+    margin-left: 0px;
+    /*outline: 2px solid rgb(81, 255, 0); */
 
-/* Products section styling */
-.navbar-products {
-    position: relative; /* To position dropdown menu */
 }
-.navbar-products .dropdown-toggle {
-    background: none;
-    border: none;
+.navdiv > ul > li > a {
     color: white;
-    font-size: 18px;
-    font-weight: bold;
+    padding: 10px 20px; /* Space inside the link */
+    border-radius: 100px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    background-color: hwb(211 0% 0% / 0); /* Invisible background */
+}
+.navdiv > ul > li > a:hover {
+    background-color: #ffffff5b; /* Semi-transparent hover effect */
+}
+.dropdown button {
+    background-color: hwb(211 0% 0% / 0); /* invisible background */
+    border: none; /* Remove the default border */
+    border-radius: 100px; /* Rounded corners */
+    padding:10px 20px; /* Space inside the button */
+    font-size: 16px;
+    color: white;
     cursor: pointer;
-    display: flex;
-    align-items: center;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+.dropdown button:hover {
+    background-color: #ffffff5b; /* Darker shade for hover effect */
+
 }
 
-.dropdown-menu {
-    display: none; /* Hidden by default */
+.dropdown .menu-list {
     position: absolute;
-    top: 130%; /* Position below the Products button */
-    left: -10px;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    border: 1px solid #ddd;
-    z-index: 1001;
+    list-style: none;
+    margin: 0px;         /* Removes default margin */
+    padding: 0px;        /* Removes default padding */
+    display: none;
+    background: rgb(51, 34, 70);
+    min-width: 100px;
 }
-  
-.dropdown-menu a {
-    color: black;
-    padding: 12px 16px;
+.dropdown:hover .menu-list{
+    display:block;
+}
+.dropdown a{
+    display: block;
     text-decoration: none;
-    display: block;
-    transition: background-color 0.3s ease;
+    color: white;
+    font-size: 16px;
+    padding-right: 50px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-  
-.dropdown-menu a:hover {
-    background-color: #f1f1f1;
-}
-  
-  /* Show dropdown when active */
-.navbar-products.active .dropdown-menu {
-    display: block;
+.dropdown a:hover{
+    background-color: #ffffff5b; /* Darker shade for hover effect */
 }
 
-.navbar-products .dropdown-toggle:hover {
-    text-decoration: underline;
+/* Outer button */
+
+.login {
+    display: inline-block;
+    background-color: hsl(0, 0%, 80%);
+    border-radius: 50px;
+
+}
+/* these two are used for overlapping effect*/
+.login .button-login {
+    margin-right: -10px;
+}
+.login .button-signin {
+    margin-left: -10px;
+}
+.login button {
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    cursor:pointer;
+    border:none;
+    border-radius: 50px;
+    background-color: hwb(211 0% 0% / 0); /* Invisible background */
+}
+.login button:hover {
+    color: black;
+    background-color: #ffffff9c; /* Darker shade for hover effect */
 }
 
 
-/* User account section styling */
-.navbar-user a {    
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 18px; /* Adjust font size as needed */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
-    text-decoration: none; /* Remove underline */
-    font-size: 18px; /* Adjust font size as needed */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+/* ============================================= */
+/* MOBILE NAVBAR STYLES                          */
+/* ============================================= */
+
+/* By default, hide the mobile navbar on desktops */
+.navbar-mobile {
+    display: none;
 }
 
-/* Hover effect for user account link */
-.navbar-user a:hover {
-    color: #f0f0f0; /* Slight color change on hover */
-    text-decoration: underline; /* Underline on hover */
-}
-.navbar-about a {
-    font-weight: bold;
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 18px; /* Adjust font size as needed */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.navbar-about a:hover {
-    color: #f0f0f0;
-    text-decoration: underline;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
+/* Show the mobile navbar and hide the desktop navbar on smaller screens */
+@media (max-width: 778px) {
+    /* Hide desktop navbar */
     .navbar {
-      height: 60px; /* Slightly smaller navbar on mobile */
-    }
-  
-    .navbar-brand {
-      font-size: 20px; /* Smaller text on mobile */
-    }
-  
-    .navbar-user a {
-      font-size: 16px; /* Smaller text on mobile */
+        display: none;
     }
 
+    /* Show mobile navbar */
+    .navbar-mobile {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(51, 34, 70);
+        padding: 0 10px;
+        height: 50px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 10px;
+    }
+
+    .hamburger-icon span {
+        /*absulute so my logo will be in the middle*/
+        position:absolute;
+        left: 13px;
+        top: 7px;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        /* Optional extra styling: 
+           padding: 10px; 
+        */
+    }
+
+    .logo-mobile img {
+        max-height: 40px; 
+        width: auto; 
+    }
+
+    .login-mobile {
+        position:absolute;
+        right: 10px;
+        
+        display: flex;
+        background-color: hsl(0, 0%, 80%);
+        border-radius: 50px;
+        overflow: hidden; /* so that the negative margin effect stays neat */
+    }
+    .button-login-mobile{
+        font-size: 16px;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        background-color: hwb(211 0% 0% / 0); /* invisible background */
+        cursor: pointer;
+    }
+    .button-login-mobile:hover {
+        background-color: #ffffff9c; 
+    }
+
+    .button-login-mobile {
+        margin-right: 0px;
+    }
 }
-  
