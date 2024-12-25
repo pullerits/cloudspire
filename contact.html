@@ -26,13 +26,13 @@
                 <li class="dropdown">
                     <button>Products</button>
                     <ul class="menu-list">
-                        <li><a href="#Product1">Product1</a></li>
-                        <li><a href="#Product2">Product2</a></li>
-                        <li><a href="#Product3">Product3</a></li>
+                        <li><a href="#Product1">Web Development</a></li>
+                        <li><a href="#Product2">Mobile Apps</a></li>
+                        <li><a href="#Product3">SEO Optimization</a></li>
                     </ul>
                 </li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <nav class="login">
                     <button class="button-login">Log In</button>
                     <button class="button-signin">Sign In</button>
@@ -40,6 +40,38 @@
             </ul>
         </div>
     </nav>
+
+    <!-- MOBILE NAVBAR -->
+    <nav class="navbar-mobile">
+        <div class="hamburger-icon" id="hamburger-menu">
+            <!-- Placeholder hamburger icon; you can replace the text or use an <img> -->
+            <span>&#9776; <!-- This is just the ‘☰’ menu symbol --></span>
+        </div>
+        <div class="logo-mobile">
+            <a href="index.html">
+                <img src="assets/images/logotext.png" alt="CloudSpire">
+            </a>
+        </div>
+        <div class="login-mobile">
+            <button class="button-login-mobile">Log In</button>
+        </div>
+    </nav>
+
+    <!-- Dropdown menu mobile -->
+    <div class="dropdown-menu" id="mobile-dropdown">
+        <a href="index.html">Home</a>
+        <div class="products-dropdown">
+            <a href="#" id="products-link">Services &#9662;</a> <!-- Downward triangle for dropdown -->
+            <div class="sub-dropdown-menu" id="products-dropdown">
+                <a href="web-development.html">Web Development</a>
+                <a href="mobile-apps.html">Mobile Apps</a>
+                <a href="seo.html">SEO Optimization</a>
+            </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
 
 
     <main class="container">
