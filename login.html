@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-EE">
+<head>
+    <title>CloudSpire - Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/auth-forms.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/cslogo.png">
+</head>
+<body>
+
+    <!-- NAVBAR (Desktop) -->
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"> 
+                <a href="index.html">
+                    <img src="assets/images/logotext.png" alt="CloudSpire">
+                </a> 
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <button>Products</button>
+                    <ul class="menu-list">
+                        <li><a href="#Product1">Web Development</a></li>
+                        <li><a href="#Product2">Mobile Apps</a></li>
+                        <li><a href="#Product3">SEO Optimization</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- Adjust these buttons to link to login and signup pages -->
+                <nav class="login">
+                    <button class="button-login" onclick="window.location.href='login.html'">Log In</button>
+                    <button class="button-signin" onclick="window.location.href='signup.html'">Sign Up</button>
+                </nav>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MOBILE NAVBAR -->
+    <nav class="navbar-mobile">
+        <div class="hamburger-icon" id="hamburger-menu">
+            <span>&#9776;</span>
+        </div>
+        <div class="logo-mobile">
+            <a href="index.html">
+                <img src="assets/images/logotext.png" alt="CloudSpire">
+            </a>
+        </div>
+        <div class="login-mobile">
+            <button class="button-login-mobile" onclick="window.location.href='login.html'">Log In</button>
+        </div>
+    </nav>
+
+    <!-- Dropdown menu mobile -->
+    <div class="dropdown-menu" id="mobile-dropdown">
+        <a href="index.html">Home</a>
+        <div class="products-dropdown">
+            <a href="#" id="products-link">Services &#9662;</a>
+            <div class="sub-dropdown-menu" id="products-dropdown">
+                <a href="#">Web Development</a>
+                <a href="#">Mobile Apps</a>
+                <a href="#">SEO Optimization</a>
+            </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <section class="auth-form-container">
+            <h1>Log In</h1>
+            <form action="#" method="POST" class="auth-form">
+                <label for="email">Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Enter your email" 
+                    required
+                />
+
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Enter your password" 
+                    required
+                />
+
+                <button type="submit">Log In</button>
+            </form>
+
+            <p class="switch-auth">
+                Don’t have an account?
+                <a href="signup.html">Sign Up Here</a>
+            </p>
+        </section>
+    </main>
+
+    <!-- FOOTER-LIKE SECTION (Fixed at Bottom) -->
+    <div class="container2">
+        <div id="box1">
+            <div>
+                <p>© 2024 CloudSpire Technologies, All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the external script -->
+    <script src="js/navbar.js"></script>
+</body>
+</html>
